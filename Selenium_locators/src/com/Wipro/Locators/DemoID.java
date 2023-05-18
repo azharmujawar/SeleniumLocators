@@ -37,7 +37,7 @@ public class DemoID {
 	public void tearDown()
 	
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }
