@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Wipro.Locators.TestScenarioLocators_02_Opencart">
+      <class name="DropDownBoxes.TestScenario_EasyCalculation">
         <methods>
-          <include name="registerUser"/>
+          <include name="easy_Cal"/>
         </methods>
-      </class> <!-- com.Wipro.Locators.TestScenarioLocators_02_Opencart -->
+      </class> <!-- DropDownBoxes.TestScenario_EasyCalculation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

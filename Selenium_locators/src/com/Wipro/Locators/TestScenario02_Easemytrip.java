@@ -1,5 +1,6 @@
 package com.Wipro.Locators;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,7 +9,7 @@ import org.testng.annotations.Test;
 
 import Utility.Helper;
 
-public class TestScenario_Easemytrip {
+public class TestScenario02_Easemytrip {
 	
 	WebDriver driver;
 	
@@ -16,7 +17,7 @@ public class TestScenario_Easemytrip {
 	public void testName()
 	{
 		
-		
+		//1. Open Browser
 		driver=Helper.startBrowser("GC");
 		driver.navigate().to("https://www.easemytrip.com/flights.html");
 		driver.findElement(By.xpath("//div[@class='emt_nav']//a[normalize-space()='Holidays']")).click();
@@ -24,7 +25,7 @@ public class TestScenario_Easemytrip {
 		
 		
 		
-		//1. Click on Holiday link and Verify Text
+		//2. Click on Holiday link and Verify Text
 		
 		String expectedText="Turn Your Dream Holiday Into A Reality";
 		
@@ -34,16 +35,27 @@ public class TestScenario_Easemytrip {
 	  
 	Assert.assertEquals(actualText, expectedText);
 	
-	//2. Click on Hotel link and Verify Text
+	
+	//3 Handeling Popup
+	
+	Alert alert = driver.switchTo().alert();
+	
+	driver.switchTo().alert().accept();
+	
+	//4. Click on Hotel link and Verify Text
 	
 	
 	String expectedText1="Same hotel, Cheapest price. Guaranteed!";
 	
-	WebElement hotelText=driver.findElement(By.linkText("Same hotel, Cheapest price. Guaranteed!"));
+	
 	
 	driver.findElement(By.xpath("//a[@class='active_n']")).click();
 	
-	//Assert.assertEquals(actualText1, expectedText1);
+	WebElement hotelText1=driver.findElement(By.linkText("Same hotel, Cheapest price. Guaranteed!"));
+	
+	String actualText1=holidayText.getText();
+	
+	Assert.assertEquals(actualText1, expectedText1);
 	
 		
 	}

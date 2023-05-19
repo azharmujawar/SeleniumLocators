@@ -26,13 +26,13 @@ public static WebDriver startBrowser(String browser)
 		
 		else if(browser.equalsIgnoreCase("Edge") || browser.equalsIgnoreCase("EG") || browser.equalsIgnoreCase("Microsoft Edge"))
 		{
-System.setProperty("webdriver.chrome.driver", "D:\\Selenium Workspace\\Selenium_locators\\EdgeBrowser\\msedgedriver.exe");
+System.setProperty("webdriver.edge.driver", "D:\\Selenium Workspace\\Selenium_locators\\EdgeBrowser\\msedgedriver.exe");
 			
 			driver=new EdgeDriver();
 		}
 		else
 		{
-			System.out.println("Worng Browser");
+			System.out.println("Wrong Browser");
 		}
 		return driver;
 		

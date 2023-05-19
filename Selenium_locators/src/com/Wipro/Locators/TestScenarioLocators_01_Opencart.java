@@ -1,7 +1,5 @@
 package com.Wipro.Locators;
 
-import static org.testng.Assert.assertEquals;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -13,20 +11,20 @@ import org.testng.annotations.Test;
 
 import Utility.Helper;
 
-public class TestScenarioLocators_02_Opencart_Edge {
+public class TestScenarioLocators_01_Opencart {
 	
 	WebDriver driver;
-
+	
 	@Test
-	public void registerUser() throws InterruptedException {
-
+	public void registerUser() throws InterruptedException
+	{
+		
 		String expectedTitle = "Register Account";
 
 		// 1. Open Url
 		
 		
-		
-		driver=Helper.startBrowser("Edge");
+		driver=Helper.startBrowser("gc");
 		driver.navigate().to("https://demo.opencart.com/index.php?route=account/register&language=en-gb");
 		driver.manage().window().maximize();
 		
@@ -85,5 +83,7 @@ public class TestScenarioLocators_02_Opencart_Edge {
 		ele2.click();
 
 	}
+
+	
 
 }
